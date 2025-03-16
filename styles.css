@@ -1,0 +1,81 @@
+:root {
+  --width: 960px;  
+  --height: 640px; 
+  --offset: 35px;
+}
+
+html, body {
+  height: 100%;        /* Убедитесь, что html и body занимают всю высоту экрана */
+  margin: 0;           /* Убираем отступы */
+  padding: 0;          /* Убираем внутренние отступы */
+  overflow: hidden;    /* Отключаем прокрутку */
+}
+
+body {
+  /* background-color: #092328; #649913 */
+  background-color: #4a6e15;
+}
+.frame {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* transform: translate(calc(-48%), calc(-38%)) */
+}
+.leon{ 
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%);
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  z-index: 3;
+  animation: appearence 3s linear;
+}
+
+.leon img {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 50px;
+  text-shadow: 10px 10px 10px rgba(100, 30, 43, 0.5);
+  color: #fff;
+}
+
+@keyframes appearence {
+  0% {
+    transform: translate(-50%, 100%);
+  }
+  100% {
+    transform: translate(-50%, 0%);
+  }
+}
+
+.notactive {
+  display: none;
+}
+
+.button_blck:hover {
+  cursor: pointer;
+}
+.button_blck h1 {
+  font-size: 20px;
+  margin: 0;
+}
+.button_blck{
+  display: flex;
+  align-items: center;  
+  gap: 10px;
+  color: #ffc4cf;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 6%;
+  left: 5%;
+}
